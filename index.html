@@ -1,191 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Évaluation gratuite</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #5E1216, #0B2351);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            background-color: #EBDACE;
-            border-radius: 20px;
-            padding: 40px 30px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-            animation: fadeIn 1s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            0% {opacity: 0; transform: translateY(-20px);}
-            100% {opacity: 1; transform: translateY(0);}
-        }
-
-        .logo {
-            display: block;
-            margin: 0 auto 15px auto; /* smaller space below logo */
-            width: 600px; /* bigger logo */
-            max-width: 90%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        h1 {
-            font-family: 'Alfa Slab One', cursive;
-            color: #0B2351;
-            text-align: center;
-            margin-bottom: 25px; /* slightly smaller margin for compact look */
-            font-size: 26px;
-            line-height: 1.2;
-        }
-
-        form label {
-            font-weight: 500;
-            color: #0B2351;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        form input, form select {
-            width: 100%;
-            padding: 14px 16px;
-            margin-bottom: 18px; /* slightly less space between fields */
-            border: 1px solid #0B2351;
-            border-radius: 12px;
-            font-size: 16px;
-            background-color: #fff;
-            color: #0B2351;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        form input:focus, form select:focus {
-            border-color: #0B2351;
-            box-shadow: 0 6px 15px rgba(11,35,81,0.3);
-            transform: translateY(-2px);
-            outline: none;
-        }
-
-        button {
-            width: 100%;
-            padding: 16px;
-            border: none;
-            border-radius: 12px;
-            font-size: 18px;
-            background: linear-gradient(135deg, #0B2351, #5E1216);
-            color: #EBDACE;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            background: linear-gradient(135deg, #5E1216, #0B2351);
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 25px 20px;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            .logo {
-                width: 200px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Évaluation gratuite</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #5E1216, #0B2351);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: #EBDACE;
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 15px auto;
+      width: 600px;
+      max-width: 90%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    .logo:hover { transform: scale(1.05); }
+    h1 {
+      font-family: 'Alfa Slab One', cursive;
+      color: #0B2351;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 26px;
+      line-height: 1.2;
+    }
+    form label {
+      font-weight: 500;
+      color: #0B2351;
+      display: block;
+      margin-bottom: 8px;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      border: 1px solid #0B2351;
+      border-radius: 12px;
+      font-size: 16px;
+      background-color: #fff;
+      color: #0B2351;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    form input:focus, form select:focus {
+      border-color: #0B2351;
+      box-shadow: 0 6px 15px rgba(11,35,81,0.3);
+      transform: translateY(-2px);
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      background: linear-gradient(135deg, #0B2351, #5E1216);
+      color: #EBDACE;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    button:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      background: linear-gradient(135deg, #5E1216, #0B2351);
+    }
+    .thank-you {
+      display: none;
+      text-align: center;
+      color: #0B2351;
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 25px 20px; }
+      h1 { font-size: 22px; }
+      .logo { width: 200px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="Blue with Gold Laurel Education Logo (13).png" alt="Logo" class="logo">
+  <div class="container">
+    <img src="Blue with Gold Laurel Education Logo (13).png" alt="Logo" class="logo">
+    <h1>Remplissez vos informations pour votre évaluation gratuite</h1>
 
-        <h1>Remplissez vos informations pour votre évaluation gratuite</h1>
+    <form id="form" action="https://formspree.io/f/mzzjwjre" method="POST">
+      <label for="nom">Insérez votre nom</label>
+      <input type="text" id="nom" name="nom" placeholder="Nom complet" required>
 
-        <form action="#" method="POST">
-            <label for="nom">Insérez votre nom</label>
-            <input type="text" id="nom" name="nom" placeholder="Nom complet" required>
+      <label for="email">Insérez votre email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
 
-            <label for="email">Insérez votre email</label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
+      <label for="telephone">Insérez votre numéro de téléphone</label>
+      <input type="tel" id="telephone" name="telephone" placeholder="Numéro de téléphone" required>
 
-            <label for="telephone">Insérez votre numéro de téléphone</label>
-            <input type="tel" id="telephone" name="telephone" placeholder="Numéro de téléphone" required>
+      <label for="age">Choisissez votre âge</label>
+      <select id="age" name="age" required>
+        <option value="" disabled selected>Âge</option>
+        <option value="18-25">18 - 25 ans</option>
+        <option value="26-30">26 - 30 ans</option>
+        <option value="31-35">31 - 35 ans</option>
+        <option value="36-40">36 - 40 ans</option>
+        <option value="40+">Plus de 40 ans</option>
+      </select>
 
-            <label for="age">Choisissez votre âge</label>
-            <select id="age" name="age" required>
-                <option value="" disabled selected>Âge</option>
-                <option value="18-25">18 - 25 ans</option>
-                <option value="26-30">26 - 30 ans</option>
-                <option value="31-35">31 - 35 ans</option>
-                <option value="36-40">36 - 40 ans</option>
-                <option value="40+">Plus de 40 ans</option>
-            </select>
+      <label for="statut">Choisissez votre statut matrimonial</label>
+      <select id="statut" name="statut" required>
+        <option value="" disabled selected>Statut matrimonial</option>
+        <option value="celibataire">Célibataire</option>
+        <option value="marie">Marié(e)</option>
+      </select>
 
-            <label for="statut">Choisissez votre statut matrimonial</label>
-            <select id="statut" name="statut" required>
-                <option value="" disabled selected>Statut matrimonial</option>
-                <option value="celibataire">Célibataire</option>
-                <option value="marie">Marié(e)</option>
-            </select>
+      <label for="niveau">Choisissez votre niveau d’études</label>
+      <select id="niveau" name="niveau" required>
+        <option value="" disabled selected>Niveau d’études</option>
+        <option value="baccalaureat">Baccalauréat</option>
+        <option value="diplome_pro">Diplôme d'institut professionnelle</option>
+        <option value="licence">Licence</option>
+        <option value="master">Master</option>
+        <option value="doctorat">Doctorat</option>
+      </select>
 
-            <label for="niveau">Choisissez votre niveau d’études</label>
-            <select id="niveau" name="niveau" required>
-                <option value="" disabled selected>Niveau d’études</option>
-                <option value="baccalaureat">Baccalauréat</option>
-                <option value="diplome_pro">Diplôme d'institut professionnelle</option>
-                <option value="licence">Licence</option>
-                <option value="master">Master</option>
-                <option value="doctorat">Doctorat</option>
-            </select>
+      <label for="experience">Combien d’années d’expérience avez-vous ?</label>
+      <select id="experience" name="experience" required>
+        <option value="" disabled selected>Expérience professionnelle</option>
+        <option value="0-2">0 - 2 ans</option>
+        <option value="3-5">3 - 5 ans</option>
+        <option value="6-10">6 - 10 ans</option>
+        <option value="10+">Plus de 10 ans</option>
+      </select>
 
-            <label for="experience">Combien d’années d’expérience avez-vous ?</label>
-            <select id="experience" name="experience" required>
-                <option value="" disabled selected>Expérience professionnelle</option>
-                <option value="0-2">0 - 2 ans</option>
-                <option value="3-5">3 - 5 ans</option>
-                <option value="6-10">6 - 10 ans</option>
-                <option value="10+">Plus de 10 ans</option>
-            </select>
+      <label for="budget">Choisissez votre budget approximatif</label>
+      <select id="budget" name="budget" required>
+        <option value="" disabled selected>Budget approximatif</option>
+        <option value="8-15">Entre 8 millions et 15 millions</option>
+        <option value="15-30">Entre 15 millions et 30 millions</option>
+        <option value="30-50">Entre 30 millions et 50 millions</option>
+        <option value="50+">Plus de 50 millions</option>
+      </select>
 
-            <label for="budget">Choisissez votre budget approximatif</label>
-            <select id="budget" name="budget" required>
-                <option value="" disabled selected>Budget approximatif</option>
-                <option value="8-15">Entre 8 millions et 15 millions</option>
-                <option value="15-30">Entre 15 millions et 30 millions</option>
-                <option value="30-50">Entre 30 millions et 50 millions</option>
-                <option value="50+">Plus de 50 millions</option>
-            </select>
+      <button type="submit">Réserver la consultation gratuite</button>
+    </form>
 
-            <button type="submit">Réserver la consultation gratuite</button>
-        </form>
+    <div class="thank-you" id="thankYou">
+      ✅ Merci ! Votre formulaire a été envoyé avec succès.<br>
+      Nous vous contacterons très bientôt.
     </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('form');
+    const thankYou = document.getElementById('thankYou');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+      } else {
+        alert("Une erreur s'est produite. Veuillez réessayer.");
+      }
+    });
+  </script>
 </body>
 </html>
+
