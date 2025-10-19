@@ -183,19 +183,25 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (response.ok) {
-        form.style.display = 'none';
-        thankYou.style.display = 'block';
-        setTimeout(() => {
-          window.location.href = "https://wa.me/213540031289?text=Bonjour%20Zineb%2C%20j%27ai%20envoy%C3%A9%20le%20formulaire%20pour%20l%27%C3%A9valuation%20gratuite.";
-        }, 4000);
-      } else {
-        alert("Une erreur s'est produite. Veuillez réessayer.");
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          thankYou.style.display = 'block';
+          setTimeout(() => {
+            window.location.href = "https://wa.me/213540031289?text=Bonjour%20Zineb%2C%20j%27ai%20envoy%C3%A9%20le%20formulaire%20pour%20l%27%C3%A9valuation%20gratuite.";
+          }, 4000);
+        } else {
+          alert("Une erreur s'est produite. Veuillez réessayer.");
+        }
+      } catch (error) {
+        alert("Erreur de connexion. Vérifiez votre Internet et réessayez.");
       }
     });
   </script>
